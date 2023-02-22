@@ -2,10 +2,8 @@
 
 function palindrome(str) {
     str = str.toLowerCase();
-    // Using Spread operator on string
     let arr = [...str];
-    // console.log(arr);
-    let arrCopy = [...str];    // as reverse method also make changes to original array
+    let arrCopy = [...str];   
     let arrReverse = arr.reverse();
         arr = arrCopy;
     console.log(`reverseArray:${arrReverse}`);
@@ -16,16 +14,7 @@ function palindrome(str) {
             return false;
         }
     }
-
-    // Directly looping over a string
-    // var n = str.length;
-    // for (let i = 0; i < n / 2; i++) {
-    //     if (str[i] != str[n - i - 1]) { 
-    //         return false;
-    //     }
-    // }
     return true;
 }
-
 console.log(palindrome("abc"))
-module.exports = palindrome
+
